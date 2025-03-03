@@ -31,7 +31,7 @@ int main() {
 
     sort(idx, idx + n, cmp);
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < n; i++) {
         int index = idx[i];
         cout << name[index] <<" "<< height[index] <<" "<< weight[index] << endl;
     }
