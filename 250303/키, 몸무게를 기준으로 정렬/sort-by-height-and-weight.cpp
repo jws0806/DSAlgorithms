@@ -18,7 +18,7 @@ bool cmp(int i, int j) {
 }
 
 int main() {
-    int idx[5]; // 정렬을 위한 인덱스 배열
+    int idx[10]; // 정렬을 위한 인덱스 배열
 
     int n;
     cin>>n;
