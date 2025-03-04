@@ -16,9 +16,8 @@ int main() {
     int min_after=a*24*60+b*60+c;
 
     min_time=min_after-min_before;
-
-    cout<<min_time;
-    // Please write your code here.
+    if(min_time<0) cout<<-1;
+    else cout<<min_time;
 
     return 0;
 }
