@@ -7,10 +7,6 @@ int a, b, c;
 int main() {
     cin >> a >> b >> c;
 
-    int days=0;
-    int hours=0;
-    int mins=0;
-
     int day=11;
     int hour=11;
     int min=11;
