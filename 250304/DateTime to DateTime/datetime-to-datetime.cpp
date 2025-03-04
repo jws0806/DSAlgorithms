@@ -12,23 +12,10 @@ int main() {
     int min=11;
     int min_time=0;
 
-    while(true){
-        if(day==a && hour==b && min==c){
-            break;
-        }
-      
-        min++;
-        min_time++;
-        if(min == 60){
-            hour++;
-            min=0;
-        }
-        if(hour == 24){
-            day++;
-            hour=0;
-        }
+    int min_before=day*24*60+hour*60+min;
+    int min_after=a*24*60+b*60+c;
 
-    }
+    min_time=min_after-min_before;
 
     cout<<min_time;
     // Please write your code here.
