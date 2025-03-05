@@ -15,14 +15,14 @@ int main() {
     int sum=0;
 
     for(int i=0; i<n.size(); i++){
-        sum+=pow(a,i);
+        sum+=(n[i]-'0')*pow(a,i);
 
     }
     int num=sum;
 
-    vector<string>v;
+    vector<int>v;
     while(num>0){
-        v.push_back(to_string(num%b));
+        v.push_back(num%b);
         num=num/b;
     }
 
