@@ -15,7 +15,7 @@ int main() {
     int sum=0;
 
     for(int i=0; i<n.size(); i++){
-        sum+=pow(8,i);
+        sum+=pow(a,i);
 
     }
     int num=sum;
