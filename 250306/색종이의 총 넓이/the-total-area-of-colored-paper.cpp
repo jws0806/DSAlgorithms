@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int SIZE = 200;
+const int SIZE = 201;
 bool paper[SIZE][SIZE] = {false}; // 80x80 크기의 좌표평면 (false: 색종이 없음, true: 색종이 덮임)
 
 int main() {
