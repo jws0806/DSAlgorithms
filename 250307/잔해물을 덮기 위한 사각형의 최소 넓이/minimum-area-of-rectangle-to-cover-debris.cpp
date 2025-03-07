@@ -36,10 +36,10 @@ int main() {
             cout<<0;
         }
         else if(x11==x1[0]){
-            
+            cout<<(x2[0]-x1[0])*(y2[0]-y22);
         }
         else if(y22==y1[0]){
-            
+            cout<<(y2[0]-y1[0])*(x1[1]-x1[0]);
         }
     }
     return 0;
