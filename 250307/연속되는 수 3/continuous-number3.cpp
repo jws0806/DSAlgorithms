@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -11,20 +12,18 @@ int main() {
         cin >> arr[i];
     }
     int cnt=1;
-    int max=0;
+    int Max=0;
     for(int i=0; i<N-1; i++){
         if(arr[i]*arr[i+1]>0){
             cnt++;
-           
         }
         else{
             cnt=1;
         }
-        if(max<cnt){
-            max=cnt;
-        }
+        Max=max(cnt,Max);
+       
     }
-    cout<<max;
+    cout<<Max;
 
     // Please write your code here.
 
