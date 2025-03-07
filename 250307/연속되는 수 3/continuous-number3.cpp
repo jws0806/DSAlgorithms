@@ -15,12 +15,13 @@ int main() {
     for(int i=0; i<N-1; i++){
         if(arr[i]*arr[i+1]>0){
             cnt++;
-            if(max<cnt){
-                max=cnt;
-            }
+           
         }
         else{
             cnt=1;
+        }
+        if(max<cnt){
+            max=cnt;
         }
     }
     cout<<max;
