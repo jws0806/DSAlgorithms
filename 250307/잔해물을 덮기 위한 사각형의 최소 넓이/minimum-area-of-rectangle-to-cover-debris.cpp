@@ -1,46 +1,45 @@
 #include <iostream>
 using namespace std;
 
-int x1[2], y1[2], x2[2], y2[2];
-int v[2001][2001];
-
 int main() {
-    cin >> x1[0] >> y1[0] >> x2[0] >> y2[0];
-    cin >> x1[1] >> y1[1] >> x2[1] >> y2[1];
+    int x1, y1, x2, y2;
+    int x3, y3, x4, y4;
 
-    int offset = 1000;
-    for(int i = y1[0] + offset; i < y2[0] + offset; i++) {
-        for(int j = x1[0] + offset; j < x2[0] + offset; j++) {
-            v[i][j] = 1;
+    // 입력 받기
+    cin >> x1 >> y1 >> x2 >> y2;
+    cin >> x3 >> y3 >> x4 >> y4;
+
+    // 겹치는 부분 좌표 계산
+    int x_overlap1 = max(x1, x3);
+    int x_overlap2 = min(x2, x4);
+    int y_overlap1 = max(y1, y3);
+    int y_overlap2 = min(y2, y4);
+
+    // 겹치는 부분이 있는지 확인
+    bool overlapExists = (x_overlap1 < x_overlap2) && (y_overlap1 < y_overlap2);
+
+    if (!overlapExists) {
+        // 겹치는 부분이 없으면 원래 직사각형 유지
+        cout << (x2 - x1) * (y2 - y1) << endl;
+    } 
+    else {
+        // 남은 영역의 최소 직사각형을 찾기
+        int min_x1 = x1, max_x2 = x2, min_y1 = y1, max_y2 = y2;
+
+        if (y_overlap1 == y1 && y_overlap2 == y2) {
+            // 겹치는 부분이 가로 전체를 덮는 경우
+            if (x_overlap1 == x1) min_x1 = x_overlap2; // 왼쪽 제거
+            else if (x_overlap2 == x2) max_x2 = x_overlap1; // 오른쪽 제거
         }
+        if (x_overlap1 == x1 && x_overlap2 == x2) {
+            // 겹치는 부분이 세로 전체를 덮는 경우
+            if (y_overlap1 == y1) min_y1 = y_overlap2; // 아래쪽 제거
+            else if (y_overlap2 == y2) max_y2 = y_overlap1; // 위쪽 제거
+        }
+
+        // 최소 직사각형의 면적 출력
+        cout << (max_x2 - min_x1) * (max_y2 - min_y1) << endl;
     }
 
-    int x11=max(x1[0],x1[1]);
-    int x22=min(x2[0],x2[1]);
-    int y11=max(y1[0],y1[1]);
-    int y22=min(y2[0],y2[1]);
-
-
-    // 남은 영역 카운트
-    int cnt = 0;
-    for(int i = y1[0] + offset; i < y2[0] + offset; i++) {
-        for(int j = x1[0] + offset; j < x2[0] + offset; j++) {
-            if(v[i][j] == 1) cnt++;
-        }
-    }
-    if(x11!=x1[0] && y22!=y1[1]){
-        cout<<cnt;
-    }
-    else{
-        if(x11==x1[0] && y22==y1[0]){
-            cout<<0;
-        }
-        else if(x11==x1[0]){
-            cout<<(x2[0]-x1[0])*(y2[0]-y22);
-        }
-        else if(y22==y1[0]){
-            cout<<(y2[0]-y1[0])*(x1[1]-x1[0]);
-        }
-    }
     return 0;
 }
