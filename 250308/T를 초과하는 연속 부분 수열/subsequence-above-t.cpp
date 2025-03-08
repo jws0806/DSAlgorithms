@@ -17,10 +17,13 @@ int main() {
         if(arr[i]>t && arr[i+1]>t){
             cnt++;
         }
+        else{
+            cnt=0;
+        }
         Max=max(cnt,Max);
     }
     if(Max==0) cout<<0;
-    else cout<<Max;
+    else cout<<Max+1;
 
     // Please write your code here.
 
