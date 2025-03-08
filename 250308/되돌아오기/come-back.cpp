@@ -27,12 +27,14 @@ int main() {
 
             if(x==0 && y==0){
                 ans=time;
-                break;
+                cout<<ans;
+                return 0;
             }
         }
 
     }
-    cout<<ans;
+    if(x!=0 || y!=0) cout<<-1;
+    else cout<<ans;
 
     // Please write your code here.
 
