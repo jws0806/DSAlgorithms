@@ -20,7 +20,7 @@ int main() {
         Max=max(cnt,Max);
     }
     if(Max==0) cout<<0;
-   else cout<<Max+1;
+    else cout<<Max;
 
     // Please write your code here.
 
