@@ -7,10 +7,10 @@ int N, M;
 int v, t;
 int v2, t2;
 
-vector<int>s1;
-vector<int>s2;
-int sum1=0;
-int sum2=0;
+vector<long>s1;
+vector<long>s2;
+long sum1=0;
+long sum2=0;
 
 int main() {
     cin >> N >> M;
@@ -30,8 +30,8 @@ int main() {
             s2.push_back(sum2);
         }
     }
-    int cnt=0;
-    for(int i=0; i<s1.size(); i++){
+    long cnt=0;
+    for(int i=0; i<s1.size()-1; i++){
         // cout<<s1[i]<<" "<<s2[i]<<endl;
         if(s1[i]>=s2[i] && s1[i+1]<s2[i+1]){
             cnt++;
