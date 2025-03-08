@@ -13,8 +13,8 @@ int main() {
     }
     int cnt=0;
     int Max=0;
-    for(int i=0; i<n-1; i++){
-        if(arr[i]>t && arr[i+1]>t){
+    for(int i=0; i<n; i++){
+        if(arr[i]>t){
             cnt++;
         }
         else{
@@ -22,8 +22,8 @@ int main() {
             cnt=0;
         }
     }
-     Max=max(cnt,Max);
-    else cout<<Max;
+    Max=max(cnt,Max);
+    cout<<Max;
 
     // Please write your code here.
 
