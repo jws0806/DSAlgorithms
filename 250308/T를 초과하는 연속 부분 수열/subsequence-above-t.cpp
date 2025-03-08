@@ -22,8 +22,8 @@ int main() {
             cnt=0;
         }
     }
-    if(Max==0) cout<<0;
-    else cout<<Max+1;
+     Max=max(cnt,Max);
+    else cout<<Max;
 
     // Please write your code here.
 
