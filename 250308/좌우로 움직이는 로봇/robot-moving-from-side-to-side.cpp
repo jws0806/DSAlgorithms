@@ -39,10 +39,8 @@ int main() {
 
     int cnt = 0;
 
-    // 선두 교체 판단 (첫 순간 체크)
-    if (a[1] == b[1]) cnt++;
 
-    for (int i = 2; i < maxTime; i++) {
+    for (int i = 1; i < maxTime; i++) {
         if (a[i - 1] != b[i - 1] && a[i] == b[i]) cnt++;
     }
 
