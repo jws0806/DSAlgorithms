@@ -14,7 +14,7 @@ int main() {
     int cnt=0;
     int Max=0;
     for(int i=0; i<n-1; i++){
-        if(arr[i]>t && arr[i-1]>t){
+        if(arr[i]>t && arr[i+1]>t){
             cnt++;
         }
         Max=max(cnt,Max);
