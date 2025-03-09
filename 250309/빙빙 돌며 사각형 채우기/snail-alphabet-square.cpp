@@ -29,7 +29,7 @@ int main() {
 
         x = nx;
         y = ny;
-        v[y][x] = 'A' + i;  
+        v[y][x] = 'A' + i%26;  
     }
 
     // 결과 출력
