@@ -34,6 +34,10 @@ int main() {
             way++;
             if(way==4) way=0;
         }
+        else{
+            way--;
+            if(way<0) way=3;
+        }
         cnt++;
         //cout<<x<<" "<<y<<endl;
         if(x==0 && y==0){
