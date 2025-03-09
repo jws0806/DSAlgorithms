@@ -42,7 +42,7 @@ int main() {
         }
 
     }
-    cout<<-1;
+    if(x!=0 && y!=0) cout<<-1;
 
     // Please write your code here.
 
