@@ -19,10 +19,13 @@ int main() {
             for(int k=i; k<=j; k++){
                 sum+=arr[k];
             }
-            int avg=sum/(j-i+1);
+            int avg;
+            if (sum % (j - i + 1) == 0) {
+                avg = sum / (j - i + 1);
+            }
             if (find(arr + i, arr + j, avg) != arr + j) {
                     cnt++;
-                }
+            }
 
         }
     }
