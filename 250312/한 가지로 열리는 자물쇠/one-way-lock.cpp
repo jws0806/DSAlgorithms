@@ -10,8 +10,21 @@ int main() {
     cin >> a >> b >> c;
 
     int ans;
+    int cntA=0;
+    int cntB=0;
+    int cntC=0;
 
-    ans=N*N*N-((N-a-2)*(N-b-2)*(N-c-2));
+    for(int i=1; i<=N; i++){
+        if(abs(a-i)>=3) cntA++;
+    }
+    for(int i=1; i<=N; i++){
+        if(abs(b-i)>=3) cntB++;
+    }
+    for(int i=1; i<=N; i++){
+        if(abs(c-i)>=3) cntC++;
+    }
+
+    ans=N*N*N-(cntA*cntB*cntC);
     cout<<ans;
 
     return 0;
