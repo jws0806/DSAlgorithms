@@ -18,6 +18,7 @@ int main() {
             if(num[j]==num[i]){
                 if(Max<num[j]){
                     Max=num[j];
+                    break;
                 }
             }
         }
