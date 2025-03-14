@@ -14,7 +14,7 @@ int main() {
         cin >> num[i];
     }
     for(int i=0; i<N; i++){
-        for(int j=i+1; (j<i+K || j<N); j++){
+        for(int j=i+1; (j<i+K+1 || j<N); j++){
             if(num[j]==num[i]){
                 if(Max<num[j]){
                     Max=num[j];
