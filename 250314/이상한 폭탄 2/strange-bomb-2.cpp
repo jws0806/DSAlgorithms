@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unordered_set>
 
 using namespace std;
 
@@ -8,25 +9,23 @@ int num[100];
 int main() {
     cin >> N >> K;
 
-    int Max=0;
+    int Max = -1;
 
     for (int i = 0; i < N; i++) {
         cin >> num[i];
     }
-    for(int i=0; i<N; i++){
-        for(int j=i+1; (j<i+K+1 || j<N); j++){
-            if(num[j]==num[i]){
-                if(Max<num[j]){
-                    Max=num[j];
-                    break;
-                }
+
+    for (int i = 0; i < N; i++) {
+        unordered_set<int> seen;
+        for (int j = i + 1; j < i + K + 1 && j < N; j++) {
+            if (num[j] == num[i]) {
+                Max = max(Max, num[i]);
+                seen.insert(num[i]); // 중복 값 확인 방지
             }
         }
     }
-    if(Max==0) cout<<-1;
-    else cout<<Max;
 
-
+    cout << Max;
 
     return 0;
 }
