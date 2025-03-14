@@ -17,10 +17,10 @@ int main() {
         for(int j=0; j<N; j++){
             int price;
             if(i==j){
-                price=P[i]/2;   
+                price=P[j]/2;   
             }
             else {
-                price=P[i];
+                price=P[j];
             }
 
             if(sum+price<=B){
@@ -28,12 +28,11 @@ int main() {
                 cnt++;
             }
             else{
-                cnt--;
                 break;
             }
         }
         Max=max(cnt,Max);
     }
-    cout<<Max-1;
+    cout<<Max;
     return 0;
 }
