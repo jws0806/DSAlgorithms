@@ -16,11 +16,10 @@ int main() {
     }
 
     for (int i = 0; i < N; i++) {
-        unordered_set<int> seen;
         for (int j = i + 1; j < i + K + 1 && j < N; j++) {
             if (num[j] == num[i]) {
                 Max = max(Max, num[i]);
-                seen.insert(num[i]); // 중복 값 확인 방지
+                
             }
         }
     }
