@@ -16,8 +16,8 @@ int main() {
     for(int i=0; i<N; i++){
         int sum=0;
         int cnt=0;
-        for(int j=0; j<N; j++){
-            if(sum<=B){
+        for(int j=0; (j<N || sum<=B); j++){
+           
                 if(i==j){
                     sum+=P[j]/2;
                     cnt++;
@@ -26,7 +26,6 @@ int main() {
                     sum+=P[j];
                     cnt++;
                 }
-            }
         }
         if(cnt>Max){
             Max=cnt;
