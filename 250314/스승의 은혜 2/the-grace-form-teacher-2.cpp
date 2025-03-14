@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 int N, B;
@@ -27,9 +27,7 @@ int main() {
                     cnt++;
                 }
         }
-        if(cnt>Max){
-            Max=cnt;
-        }
+        Max=max(cnt,Max);
    
 
     }
