@@ -15,27 +15,25 @@ int main() {
         int sum=0;
         int cnt=0;
         for(int j=0; j<N; j++){
-           
-                if(i==j){
-                    sum+=P[j]/2;
-                    cnt++;
-                    if(sum>B){
-                        cnt--;
-                        break;
+            int price;
+            if(i==j){
+                price=P[i]/2;   
+            }
+            else {
+                price=P[i];
+            }
 
-                    }
-                }
-                else{
-                    sum+=P[j];
-                    cnt++;
-                    if(sum>B){
-                        cnt--;
-                    }
-                }
+            if(sum+price<=B){
+                sum+=price;
+                cnt++;
+            }
+            else{
+                cnt--;
+                break;
+            }
         }
-        //cout<<cnt;
         Max=max(cnt,Max);
     }
-    cout<<Max;
+    cout<<Max-1;
     return 0;
 }
