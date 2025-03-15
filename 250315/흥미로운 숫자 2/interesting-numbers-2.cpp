@@ -25,11 +25,11 @@ int main() {
             if(num[j]==1){
                 cnt_one++;
             }
-            if(num[j]>0){
+            if(num[j]>1){
                 cnt++;
             }
         }
-        if(cnt_one==2 || (cnt_one==1 && cnt>0)){
+        if(cnt_one==2 || (cnt_one==1 && cnt==1)){
             one_count++;
         }
         //cout<<endl;
