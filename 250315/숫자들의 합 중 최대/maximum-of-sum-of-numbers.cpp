@@ -10,7 +10,7 @@ int main() {
     cin >> X >> Y;
 
     for(int i=X; i<=Y; i++){
-        int num=X;
+        int num=i;
         int sum=0;
         while(num>0){
             sum=sum+num%10;
