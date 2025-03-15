@@ -8,27 +8,22 @@ int a[100];
 
 int main() {
     cin >> n;
-
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
-    sort(a,a+n);
-    int Min=a[0];
-    int Max=a[n-1];
+    
+    sort(a, a + n); // 정렬
 
-    int k=Min;
-    int cnt=0;
+    int cnt = 0;
 
-    while(k<=Max){
-        for(int i=0; i<n-1; i++){
-            for(int j=i+1; j<n; j++){
-                if(a[j]-k == k-a[i]){
-                    cnt++;
-                }
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if ((a[i] + a[j]) % 2 == 0) { // k가 정수인지 확인
+                cnt++;
             }
         }
-        k++;
     }
-    cout<<cnt;
+
+    cout << cnt;
     return 0;
 }
