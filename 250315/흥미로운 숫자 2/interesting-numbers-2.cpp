@@ -32,7 +32,8 @@ int main() {
         if(cnt_one==2 || (cnt_one==1 && cnt==1)){
             one_count++;
         }
-        //cout<<endl;
+        // cout<<" "<<cnt_one<<" "<<cnt<<" "<<one_count<<endl;
+        // cout<<endl;
     }
     cout<<one_count;
 
