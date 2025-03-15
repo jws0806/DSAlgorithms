@@ -16,10 +16,10 @@ int main() {
     int Min=a[0];
     int Max=a[n-1];
 
-    int k=Min+1;
+    int k=Min;
     int cnt=0;
 
-    while(k<Max){
+    while(k<=Max){
         for(int i=0; i<n-1; i++){
             for(int j=i+1; j<n; j++){
                 if(a[j]-k == k-a[i]){
