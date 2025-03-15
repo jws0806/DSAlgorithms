@@ -25,11 +25,11 @@ int main() {
             if(num[j]==1){
                 cnt_one++;
             }
-            if(num[j]>1){
+            if(num[j]>0){
                 cnt++;
             }
         }
-        if(cnt_one==2 || (cnt_one==1 && cnt==1)){
+        if(cnt==2 || (cnt_one==1)){
             one_count++;
         }
         // cout<<" "<<cnt_one<<" "<<cnt<<" "<<one_count<<endl;
