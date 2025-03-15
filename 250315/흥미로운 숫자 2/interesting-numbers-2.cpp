@@ -25,7 +25,7 @@ int main() {
             if(num[j]==1){
                 cnt_one++;
             }
-            if(num[j]>=1){
+            if(num[j]>0){
                 cnt++;
             }
         }
