@@ -29,7 +29,7 @@ int main() {
                 cnt++;
             }
         }
-        if(cnt_one==1 && cnt>0){
+        if(cnt_one==2 || (cnt_one==1 && cnt>0)){
             one_count++;
         }
         //cout<<endl;
