@@ -17,15 +17,15 @@ int main() {
     }
     int x=a[0];
     while(true){
-        int num=x;
-        num*=2;
+        int num=2*x;
+     
         bool flag=true;
         for(int i=0; i<n; i++){
             if(num<a[i] || num>b[i]){
                 flag=false;
                 break;
             }
-            num=num*2;
+            num*=2;
         }
         if(flag==true){
             cout<<x;
