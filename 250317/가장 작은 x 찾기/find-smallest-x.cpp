@@ -23,6 +23,7 @@ int main() {
         for(int i=0; i<n; i++){
             if(num<a[i] || num>b[i]){
                 flag=false;
+                break;
             }
             num=num*2;
         }
