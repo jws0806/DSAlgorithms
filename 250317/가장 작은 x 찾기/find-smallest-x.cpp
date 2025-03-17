@@ -18,7 +18,7 @@ int main() {
     int x=a[0];
     while(true){
         int num=x;
-        num=num*2;
+        num*=2;
         bool flag=true;
         for(int i=0; i<n; i++){
             if(num<a[i] || num>b[i]){
@@ -29,7 +29,7 @@ int main() {
         }
         if(flag==true){
             cout<<x;
-            return 0;
+            break;
         }
         x++;
     }
