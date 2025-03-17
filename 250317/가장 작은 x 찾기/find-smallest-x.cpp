@@ -29,7 +29,7 @@ int main() {
         }
         if(flag==true){
             cout<<x;
-            break;
+            return 0;
         }
         x++;
     }
