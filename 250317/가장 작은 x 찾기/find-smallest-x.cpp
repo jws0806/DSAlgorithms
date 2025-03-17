@@ -1,6 +1,4 @@
 #include <iostream>
-#include <algorithm>
-
 using namespace std;
 
 int n;
@@ -8,38 +6,37 @@ int a[10], b[10];
 
 int main() {
     cin >> n;
-
+    
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-
+    
     for (int i = 0; i < n; i++) {
         cin >> a[i] >> b[i];
     }
-
-    // x의 최소 시작점을 a[i] 중 최댓값으로 설정
-    int x = *max_element(a, a + n);
-
-    while (true) {
-        int num = x;
+    
+    // 시작점 최적화: 첫 번째 범위에서 가능한 가장 작은 x 값 찾기
+    int x = (a[0] + 1) / 2;  // 첫 번째 범위의 최소값에 맞는 x 값
+    
+    while(true) {
+        long long num = 2 * x;  // long long으로 변경하여 오버플로우 방지
+        
         bool flag = true;
-
-        // 각 범위 조건을 확인
-        for (int i = 0; i < n; i++) {
-            if (num < a[i] || num > b[i]) {
+        for(int i = 0; i < n; i++) {
+            if(num < a[i] || num > b[i]) {
                 flag = false;
                 break;
             }
-            num *= 2;  // 2배 증가
+            num *= 2;
         }
-
-        if (flag) {
-            cout << x << "\n";
-            return 0;
+        
+        if(flag == true) {
+            cout << x;
+            break;
         }
-
-        x++;  // 다음 x 시도
+        
+        x++;
     }
-
+    
     return 0;
 }
